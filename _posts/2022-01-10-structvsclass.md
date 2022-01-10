@@ -1,3 +1,11 @@
+---
+layout: post
+title: Struct vs. Classes 비교해보자!!
+subtitle: Struct, Classes
+categories: swift
+tags: [swift]
+---
+
 # Struct vs. Classes
 
 ### Struct 와 Class 를 심도깊게 비교해보자!!!
