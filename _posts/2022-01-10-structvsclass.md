@@ -155,5 +155,38 @@ struct Enemy {
 }
 ```
 
+![structImmutability.png](https://github.com/halaxhenry/halaxhenry.github.io/blob/main/assets/images/structImmutability.png?raw=true)
 
+
+
+```swift
+var skeleton1 = Enemy(health: 100, attackStrength: 10)
+var skeleton2 = skeleton1
+
+skeleton1.takeDamage(amount: 10)
+
+skeleton1.takeDamage(amount: 10)
+skeleton2.takeDamage(amount: 10)
+
+print(skeleton1.health)
+print(skeleton2.health)
+
+// result :
+// 80
+// 90
+```
+
+### 이제 제대로 반영이 되었구만유!!! 서로 다른 값으로 분류되었어요!!! 
+
+
+
+| Structures                                                   | Classes                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| struct MyStruct {}<br /><br />immutable<br /><br />Passed by Value | class MyClass: SuperClass {}<br /><br />Passed by Reference<br /><br />Inheritance |
+
+
+
+### 다 담지 못한 부분이 많은 것 같습니다
+
+### 나머지는 https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html 을 참조 해야겠습니다
 
